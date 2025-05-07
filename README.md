@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Next.js, showcasing expertise in AI Engineering and Large Language Models.
 
-![Portfolio Preview](public/john-main.jpg)
+![Portfolio Preview](public/firs-page.jpg)
 
 ## 🌟 Features
 

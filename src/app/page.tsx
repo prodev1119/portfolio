@@ -56,7 +56,7 @@ export default function Home() {
                 />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
-                Hello, I'm <span className="text-blue-200 dark:text-blue-400">John Hinton</span>
+                Hi, I'm <span className="text-blue-200 dark:text-blue-400">John Hinton</span>
               </h1>
               <p className="text-xl md:text-2xl text-blue-100 dark:text-blue-200 mb-2">
                 AI Engineer

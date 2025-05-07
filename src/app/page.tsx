@@ -62,7 +62,7 @@ export default function Home() {
                 AI Engineer
               </p>
               <p className="text-lg text-blue-200 dark:text-blue-300 mb-8">
-                LLM Expert Experienced with OpenAI, GPT, Pinecone, LAG, Tensorflow, PyTorch and more
+                LLM Expert Experienced with OpenAI, HuggingFace, Pinecone, LAG, Tensorflow, PyTorch and more
               </p>
               <motion.a
                 href="#contact"
@@ -76,29 +76,79 @@ export default function Home() {
           </section>
         )}
 
-        {/* About Section */}
-        <section id="about" className="py-20 bg-white dark:bg-gray-900">
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
-            <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-              I am an AI Engineer based in the US, specializing in Large Language Models (LLMs). My expertise spans across leading-edge technologies such as OpenAI, GPT, Pinecone, and more. I am passionate about building intelligent systems that leverage the power of modern AI to solve real-world problems.
-            </p>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              {["Large Language Models (LLM)", "OpenAI", "GPT", "Pinecone", "Vector Databases", "Prompt Engineering", "Python", "Tensorflow", "PyTorch", "Next.js", "TypeScript", "DevOps"].map((skill) => (
-                <div
-                  key={skill}
-                  className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm text-center"
-                >
-                  {skill}
+        {/* About & Skills Section (Redesigned) */}
+        <section id="about-skills" className="py-20 bg-white dark:bg-gray-900">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-12 items-start justify-center">
+            {/* About Me (Left) */}
+            <div className="flex-1 flex flex-col items-center md:items-start">
+              <h2 className="text-3xl font-bold text-cyan-500 mb-2 border-b-4 border-cyan-300 w-fit pb-1">About Me</h2>
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mt-6">
+                {/* Avatar */}
+                <div className="flex-shrink-0">
+                  <Image
+                    src="/john-avatar.jpg"
+                    alt="John Hinton"
+                    width={160}
+                    height={160}
+                    className="w-40 h-40 rounded-full object-cover border-4 border-cyan-400 shadow-lg"
+                  />
                 </div>
-              ))}
+                <div className="mt-4 md:mt-0 md:ml-6 flex-1">
+                  <h3 className="text-2xl font-bold mb-1">John Hinton</h3>
+                  <p className="text-lg font-medium text-gray-700 dark:text-gray-200 mb-2">AI Engineer</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-2">
+                    AI Engineer with expertise in LLMs, OpenAI, HuggingFace, Pinecone, and more. Passionate about building intelligent, scalable systems for real-world impact.
+                  </p>
+                </div>
+              </div>
+              {/* My Journey */}
+              <div className="mt-8">
+                <h4 className="text-xl font-semibold mb-2">My Journey</h4>
+                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                  I started my AI journey with a passion for creating intuitive and scalable applications. With deep knowledge of LLMs, OpenAI, HuggingFace, Pinecone, Tensorflow, and PyTorch, I have built projects such as chatbot platforms, knowledge bases, and enterprise AI solutions. My work showcases my ability to integrate powerful backend AI with beautiful, user-friendly interfaces.
+                </p>
+              </div>
+            </div>
+            {/* Skills & Expertise (Right) */}
+            <div className="flex-1 w-full">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-cyan-200 dark:border-cyan-900 relative" style={{boxShadow: '0 8px 32px 0 rgba(0, 255, 255, 0.10)'}}>
+                <h3 className="text-2xl font-bold text-cyan-500 text-center mb-6">Skills & Expertise</h3>
+                <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                  {/* Example skills with icons. Replace src with your own icons if available */}
+                  <div className="flex flex-col items-center bg-white dark:bg-gray-900 border-2 border-cyan-200 dark:border-cyan-700 rounded-lg p-3 shadow-sm hover:shadow-cyan-200 transition-shadow">
+                    <Image src="/icons/LLM.png" alt="LLM" width={36} height={36} />
+                    <span className="mt-2 text-sm font-medium">LLM</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-white dark:bg-gray-900 border-2 border-cyan-200 dark:border-cyan-700 rounded-lg p-3 shadow-sm hover:shadow-cyan-200 transition-shadow">
+                    <Image src="/icons/OPA.png" alt="OpenAI" width={36} height={36} />
+                    <span className="mt-2 text-sm font-medium">OpenAI</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-white dark:bg-gray-900 border-2 border-cyan-200 dark:border-cyan-700 rounded-lg p-3 shadow-sm hover:shadow-cyan-200 transition-shadow">
+                    <Image src="/icons/HGF.png" alt="HuggingFace" width={36} height={36} />
+                    <span className="mt-2 text-sm font-medium">HuggingFace</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-white dark:bg-gray-900 border-2 border-cyan-200 dark:border-cyan-700 rounded-lg p-3 shadow-sm hover:shadow-cyan-200 transition-shadow">
+                    <Image src="/icons/pc.png" alt="Pinecone" width={36} height={36} />
+                    <span className="mt-2 text-sm font-medium">Pinecone</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-white dark:bg-gray-900 border-2 border-cyan-200 dark:border-cyan-700 rounded-lg p-3 shadow-sm hover:shadow-cyan-200 transition-shadow">
+                    <Image src="/icons/TF.png" alt="Tensorflow" width={36} height={36} />
+                    <span className="mt-2 text-sm font-medium">Tensorflow</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-white dark:bg-gray-900 border-2 border-cyan-200 dark:border-cyan-700 rounded-lg p-3 shadow-sm hover:shadow-cyan-200 transition-shadow">
+                    <Image src="/icons/PT.png" alt="PyTorch" width={36} height={36} />
+                    <span className="mt-2 text-sm font-medium">PyTorch</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-white dark:bg-gray-900 border-2 border-cyan-200 dark:border-cyan-700 rounded-lg p-3 shadow-sm hover:shadow-cyan-200 transition-shadow">
+                    <Image src="/icons/LC.png" alt="LangChain" width={36} height={36} />
+                    <span className="mt-2 text-sm font-medium">LangChain</span>
+                  </div>
+                  <div className="flex flex-col items-center bg-white dark:bg-gray-900 border-2 border-cyan-200 dark:border-cyan-700 rounded-lg p-3 shadow-sm hover:shadow-cyan-200 transition-shadow">
+                    <Image src="/icons/llama.png" alt="Llama" width={36} height={36} />
+                    <span className="mt-2 text-sm font-medium">Llama</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -106,7 +156,7 @@ export default function Home() {
         {/* Projects Section */}
         <section id="projects" className="py-20 bg-white dark:bg-gray-900">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Experienced Projects</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Project cards will go here */}
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
@@ -160,6 +210,30 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* History Section */}
+        <section id="history" className="py-20 bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-cyan-500 text-center mb-12 border-b-4 border-cyan-300 w-fit mx-auto pb-1">History</h2>
+            <div className="flex flex-col gap-8 mt-8">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-cyan-400">
+                <h3 className="text-xl font-semibold mb-1">2023 - Present</h3>
+                <p className="text-gray-700 dark:text-gray-200 font-medium">AI Engineer at OpenAI</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Leading LLM and AI projects for enterprise clients, focusing on scalable AI solutions.</p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-cyan-400">
+                <h3 className="text-xl font-semibold mb-1">2021 - 2023</h3>
+                <p className="text-gray-700 dark:text-gray-200 font-medium">ML Researcher at Google DeepMind</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Researched and developed NLP models, contributed to open-source LLM frameworks.</p>
+              </div>
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-cyan-400">
+                <h3 className="text-xl font-semibold mb-1">2017 - 2021</h3>
+                <p className="text-gray-700 dark:text-gray-200 font-medium">B.S. in Computer Science, Massachusetts Institute of Technology</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Graduated with honors, specialized in AI and machine learning.</p>
               </div>
             </div>
           </div>

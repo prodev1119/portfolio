@@ -11,11 +11,11 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#about" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+            <Link href="#about-skills" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
               About
             </Link>
-            <Link href="#skills" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              Skills
+            <Link href="#history" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+              History
             </Link>
             <Link href="#projects" className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
               Projects

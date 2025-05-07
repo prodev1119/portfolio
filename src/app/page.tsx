@@ -62,7 +62,7 @@ export default function Home() {
                 AI Engineer
               </p>
               <p className="text-lg text-blue-200 dark:text-blue-300 mb-8">
-                LLM Expert Experienced with OpenAI, HuggingFace, Pinecone, LAG, Tensorflow, PyTorch and more
+                LLM Expert Experienced with OpenAI, HuggingFace, Pinecone, RAG, Tensorflow, PyTorch and more
               </p>
               <motion.a
                 href="#contact"

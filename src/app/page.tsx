@@ -156,7 +156,7 @@ export default function Home() {
         {/* Projects Section */}
         <section id="projects" className="py-20 bg-white dark:bg-gray-900">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Experienced Projects</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Project cards will go here */}
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
